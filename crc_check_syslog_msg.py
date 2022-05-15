@@ -92,7 +92,7 @@ bar.finish()
 #Sorts result by larger CRC error
 lst = sorted(result, key=lambda x: x[2], reverse=True)
 logMessage = ''
-#Inserting rows in Table using data from sorted list
+#Create a syslog message with all stored crc logs
 for x in lst :
     logMessage += f'{x[0]}  ,   {x[1]}  ,   {x[2]}\n'
 mkaLogger = logging.getLogger('mkaMontior')
